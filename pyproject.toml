@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "second-brain-assistant"
+version = "0.1.0"
+description = ""
+authors = ["antoinedao <antoinedao1@gmail.com>"]
+readme = "README.md"
+packages = [{include = "second_brain_assistant"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.23.1"
+langchain = "^0.0.214"
+openai = "^0.27.8"
+chromadb = "^0.3.26"
+python-dotenv = "^1.0.0"
+notion-client = "^2.0.0"
+pydantic = "^1.10.9"
+notion2md = "^2.8.2"
+tiktoken = "^0.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+load_notion_database = 'second_brain_assistant.vectorstore:load_notion_database'
+
